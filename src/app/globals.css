@@ -23,3 +23,42 @@ body {
     text-wrap: balance;
   }
 }
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background: #4fc4ab;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #007063;
+}
+
+.creative-break {
+  position: absolute;
+  background: #007063;
+  height: 4px;
+  width: 350px;
+  margin: auto;
+}
+.diamond {
+  background: #007063;
+  height: 9px;
+  width: 9px;
+  position: absolute;
+  transform: rotate(38deg) skewY(15deg);
+  top: -3px;
+}
+.left-diamond {
+  right: -3px;
+}
+
+@media only screen and (max-width: 400px) {
+  .creative-break {
+    width: 230px !important;
+  }
+}
+.shadowText {
+  text-shadow: 5px 5px 10px #00000078;
+}

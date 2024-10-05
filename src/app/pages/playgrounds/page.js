@@ -1,27 +1,38 @@
 "use client";
 
-// import { useRouter } from "next/compat/router";
+import CreativeBreakLine from "@/components/CreativeBreakLine";
+import homePhoto from "../../../../pubilc/assets/homephoto.webp";
+import PlaygroundsCard from "@/components/PlaygroundsCard";
+import Link from "next/link";
+import Pagination from "@/components/Pagination";
+import { useState } from "react";
+
+const data = [
+  { id: 1, name: "Star Park", photo: "" },
+  { id: 2, name: "Star Park", photo: "" },
+  { id: 3, name: "Star Park", photo: "" },
+  { id: 4, name: "Star Park", photo: "" },
+  { id: 5, name: "Star Park", photo: "" },
+  { id: 6, name: "Star Park", photo: "" },
+];
 
 export default function Playgrounds() {
-  const playGrounds = [
-    { id: 1, name: "Star Park", Phone: "01022361565" },
-    { id: 2, name: "Santos Round", Phone: "" },
-    { id: 3, name: "National Park", Phone: "01022361565" },
-  ];
+  const [page, setPage] = useState(1);
+  const [limit, setLimit] = useState(25);
+  const [totalPages, setTotalPages] = useState(20);
+
   return (
-    <div className="">
-      {playGrounds.map((ground) => (
-        <div key={ground.id} className="p-2 items-center flex justify-center">
-          <div
-            onClick={() =>
-              (window.location.href = `/pages/playgrounds/${ground.id}`)
-            }
-            className="border-primary border-2 rounded-3xl shadow p-4 text-center cursor-pointer w-1/2 hover:bg-primary hover:text-white"
-          >
-            {ground.name}
-          </div>
-        </div>
-      ))}
+    <div className="p-4 py-8 flex flex-col justify-center text-center items-center space-y-12 w-full">
+      <CreativeBreakLine title="الملاعب المتاحة" />
+      <PlaygroundsCard data={data} demoImage={homePhoto} />
+      <Pagination
+        currentPage={1}
+        page={page}
+        limit={limit}
+        totalPages={totalPages}
+        onPageChange={(p) => setPage(p)}
+        onLimitChange={(l) => setLimit(l)}
+      />
     </div>
   );
 }
