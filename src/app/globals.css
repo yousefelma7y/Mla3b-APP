@@ -62,3 +62,138 @@ body {
 .shadowText {
   text-shadow: 5px 5px 10px #00000078;
 }
+
+/*Creative Card */
+@keyframes rotBGimg {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.card-bg {
+  background-image: linear-gradient(360deg, #53ffda, #038f7f);
+  transition: all 0.3s linear;
+}
+
+.animate-rotBGimg {
+  animation: rotBGimg 3s linear infinite;
+}
+/*Creative Button */
+
+/* Custom CSS to handle animations and polygon shapes */
+.polygon-clip {
+  --color: #038f7f;
+  clip-path: polygon(
+    30% 0%,
+    70% 0%,
+    100% 30%,
+    100% 70%,
+    70% 100%,
+    30% 100%,
+    0% 70%,
+    0% 30%
+  );
+}
+
+.polygon-left-arrow {
+  clip-path: polygon(100% 0, 100% 100%, 0 50%);
+}
+
+.polygon-right-arrow {
+  clip-path: polygon(100% 49%, 0 0, 0 100%);
+}
+
+.corner {
+  background-color: #27c39f;
+  box-shadow: inset 1px 1px 8px #038f7f;
+  transform: scale(1) rotate(45deg);
+  transition: 0.2s;
+}
+
+button:hover #clip {
+  animation: greenLight8 0.2s ease-in-out 0.55s both;
+  --color: #27c39f;
+}
+
+button:hover .corner {
+  transform: scale(1.25) rotate(45deg);
+}
+
+button:hover #leftTop {
+  animation: changeColor8 0.1s ease-in-out 0.05s both,
+    lightEffect8 0.2s linear 0.4s both;
+}
+
+button:hover #rightTop {
+  animation: changeColor8 0.1s ease-in-out 0.15s both,
+    lightEffect8 0.2s linear 0.4s both;
+}
+
+button:hover #rightBottom {
+  animation: changeColor8 0.1s ease-in-out 0.25s both,
+    lightEffect8 0.2s linear 0.4s both;
+}
+
+button:hover #leftBottom {
+  animation: changeColor8 0.1s ease-in-out 0.35s both,
+    lightEffect8 0.2s linear 0.4s both;
+}
+
+@keyframes changeColor8 {
+  from {
+    background-color: #53ffda;
+  }
+  to {
+    background-color: #038f7f;
+  }
+}
+
+@keyframes lightEffect8 {
+  from {
+    box-shadow: 1px 1px 5px #038f7f;
+  }
+  to {
+    box-shadow: 0 0 2px #27c39f;
+  }
+}
+
+@keyframes greenLight8 {
+  from {
+  }
+  to {
+    box-shadow: inset 0px 0px 32px #27c39f;
+  }
+}
+
+@keyframes leftArrow8 {
+  from {
+    transform: translate(0px);
+  }
+  to {
+    transform: translateX(10px);
+  }
+}
+
+@keyframes rightArrow8 {
+  from {
+    transform: translate(0px);
+  }
+  to {
+    transform: translateX(-10px);
+  }
+}
+
+button:hover #rightArrow {
+  background-color: #038f7f;
+  left: -15%;
+  animation: rightArrow8 0.6s ease-in-out both infinite alternate;
+}
+
+button:hover #leftArrow {
+  background-color: #038f7f;
+  left: 103%;
+  animation: leftArrow8 0.6s ease-in-out both infinite alternate;
+}

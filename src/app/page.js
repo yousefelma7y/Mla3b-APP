@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import homePhoto from "../../pubilc/assets/homephoto.webp";
 import test from "../../pubilc/assets/download.png";
@@ -11,6 +12,9 @@ import {
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import PlaygroundsCard from "@/components/PlaygroundsCard";
+import CreativeCard from "@/components/CreativeCard";
+import CreativeBtn from "@/components/CreativeBtn";
+import CreativePlayGroundsCard from "@/components/CreativePlayGroundsCard";
 
 const data = [
   { id: 1, name: "Star Park", photo: "" },
@@ -52,12 +56,7 @@ export default function Home() {
 
           {/* Call to Action Button */}
           <div className="flex justify-center lg:justify-end w-full">
-            <Link
-              href={`/pages/signin`}
-              className="rounded-2xl cursor-pointer hover:bg-primary bg-secondary text-white p-3 text-center w-1/2 lg:w-1/2"
-            >
-              سجل ملعبك الان
-            </Link>
+            <CreativeBtn pass={"/pages/signin"} lable={"سجل ملعبك الأن"} />
           </div>
         </div>
       </div>
@@ -65,45 +64,32 @@ export default function Home() {
       <div className="p-4 flex flex-col justify-center text-center items-center space-y-12">
         {/* Section Title */}
         <CreativeBreakLine title="كيف تحجز ملعب" />
-
         {/* Cards Container */}
         <div className="flex flex-col lg:flex-row items-center justify-center xl:space-x-8 lg:space-x-4 space-y-4 lg:space-y-0 w-5/6 md:w-full xl:w-3/4">
           {/* Card 1: Vodafone Cash */}
-          <div className="bg-white p-4 w-full h-[200px] rounded-xl space-y-4 lg:space-y-8 shadow">
-            <h2 className="text-gray-400 font-bold text-lg pt-4">
-              أكد حجزك عن طريق فودافون كاش
-            </h2>
-            <div className="w-full flex items-start justify-center text-center">
-              <CreditCardIcon className="size-12 text-primary" />
-            </div>
-          </div>
+          <CreativeCard
+            title="أكد حجزك عن طريق فودافون كاش"
+            icon={<CreditCardIcon className="size-12 text-primary" />}
+          />
 
           {/* Card 2: Match Time */}
-          <div className="bg-white p-4 w-full h-[200px]  rounded-xl space-y-4 lg:space-y-8 shadow">
-            <h2 className="text-gray-400 font-bold text-lg pt-4">
-              اختر موعد المباراة المناسب
-            </h2>
-            <div className="w-full flex items-start justify-center text-center">
-              <ClockIcon className="size-12 text-primary" />
-            </div>
-          </div>
+          <CreativeCard
+            title="اختر موعد المباراة المناسب"
+            icon={<ClockIcon className="size-12 text-primary" />}
+          />
 
           {/* Card 3: Select Field */}
-          <div className="bg-white p-4 w-full h-[200px] rounded-xl space-y-4 lg:space-y-8 shadow">
-            <h2 className="text-gray-400 font-bold text-lg pt-4">
-              اختر ملعب من الملاعب
-            </h2>
-            <div className="w-full flex items-start justify-center text-center">
-              <ShoppingBagIcon className="size-12 text-primary" />
-            </div>
-          </div>
+          <CreativeCard
+            title="أختر ملعب من الملاعب"
+            icon={<ShoppingBagIcon className="size-12 text-primary" />}
+          />
         </div>
       </div>
       {/* Third Section */}
       <div className="p-4 py-8 flex flex-col justify-center text-center items-center space-y-12 w-full">
         <CreativeBreakLine title="الملاعب المتاحة" />
         <PlaygroundsCard data={data} demoImage={homePhoto} />
-
+        <CreativePlayGroundsCard />
         <Link
           href={`/pages/playgrounds`}
           className="rounded-2xl cursor-pointer hover:bg-secondary bg-primary text-white p-4 px-10 text-center w-3/4 sm:1/2 lg:w-1/4"
