@@ -17,16 +17,16 @@ const data = [
 ];
 
 export default function Playgrounds() {
-  const [page, setPage] = useState(1);
-  const [limit, setLimit] = useState(25);
-  const [totalPages, setTotalPages] = useState(20);
+  const [page, setPage] = useState(30);
+  const [limit, setLimit] = useState(80);
+  const [totalPages, setTotalPages] = useState(100);
 
   return (
     <div className="p-4 py-8 flex flex-col justify-center text-center items-center space-y-12 w-full">
       <CreativeBreakLine title="الملاعب المتاحة" />
       <PlaygroundsCard data={data} demoImage={homePhoto} />
       <Pagination
-        currentPage={1}
+        currentPage={20}
         page={page}
         limit={limit}
         totalPages={totalPages}
