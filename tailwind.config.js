@@ -12,10 +12,21 @@ module.exports = {
         secondary: "#4FC4AB",
         backgroundColor: "#dfdfdf",
         fontColor: "#052e16",
-        footer: "#63695B",
+        footer: "#6A8A70",
         background: "var(--background)",
+      },
+      animation: {
+        pulse: "pulse 1s infinite",
+      },
+      keyframes: {
+        pulse: {
+          "0%": { opacity: ".1" },
+          "30%": { opacity: ".8" },
+          "100%": { opacity: ".1" },
+        },
       },
     },
   },
+  variants: {},
   plugins: [],
 };

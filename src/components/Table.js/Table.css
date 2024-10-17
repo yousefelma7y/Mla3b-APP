@@ -1,0 +1,95 @@
+.fc-media-screen {
+  height: 1000px !important;
+}
+
+.fc td,
+.fc th {
+  vertical-align: middle !important;
+}
+.fc-daygrid-body-unbalanced {
+  display: none;
+}
+.fc-timegrid-divider {
+  display: none;
+}
+
+.fc-timegrid-slot {
+  padding: 10px !important;
+}
+
+.fc-scrollgrid-shrink-cushion {
+  padding: 0px !important;
+}
+.fc-button {
+  background-color: #007063 !important;
+  color: white !important;
+  border: 1px solid #4fc4ab !important;
+}
+.fc-button:hover {
+  background-color: #4fc4ab !important;
+}
+.fc-timegrid-axis {
+  background-color: #007063 !important;
+  border: 1px solid #4fc4ab !important;
+}
+.fc-col-header-cell {
+  padding: 10px !important;
+  background-color: #007063 !important;
+  border: 1px solid #4fc4ab !important;
+}
+.fc-col-header-cell-cushion {
+  color: white;
+  text-decoration: none;
+}
+.fc-col-header-cell-cushion:hover {
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
+.fc-timegrid-slot-label-cushion {
+  cursor: pointer;
+  color: white !important;
+}
+.fc-daygrid-day-number {
+  color: #007063 !important;
+}
+.fc-event-main {
+  background-color: #4fc4ab !important;
+}
+
+.fc-theme-standard td,
+.fc-theme-standard th {
+  border: 1px solid #19887b !important;
+}
+.fc-col-header {
+  width: 100% !important;
+}
+
+.fc-view-harness {
+  background-color: white;
+}
+
+@media only screen and (max-width: 450px) {
+  .fc-col-header-cell-cushion {
+    padding: 0px !important;
+    font-size: 11px !important;
+  }
+
+}
+@media only screen and (max-width: 767px) {
+  .fc-event-main i {
+    width: 100%;
+    font-size: 10px;
+  }
+  .order-btn {
+    margin-top: 0% !important;
+  }
+  colgroup col {
+    width: 50px !important;
+  }
+}
+@media only screen and (max-width: 744px) {
+  .fc-daygrid-event-harness {
+    display: none;
+  }
+}

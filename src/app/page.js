@@ -17,11 +17,11 @@ import CreativeBtn from "@/components/CreativeBtn";
 
 const data = [
   { id: 1, name: "Star Park", photo: "" },
-  { id: 2, name: "Star Park", photo: "" },
-  { id: 3, name: "Star Park", photo: "" },
-  { id: 4, name: "Star Park", photo: "" },
-  { id: 5, name: "Star Park", photo: "" },
-  { id: 6, name: "Star Park", photo: "" },
+  { id: 2, name: "San Sero", photo: "" },
+  { id: 3, name: "Elshrouk", photo: "" },
+  { id: 4, name: "Anfild", photo: "" },
+  { id: 5, name: "Arena Park", photo: "" },
+  { id: 6, name: "Santiago", photo: "" },
 ];
 export default function Home() {
   return (
@@ -36,7 +36,7 @@ export default function Home() {
               alt="home"
               width={550}
               height={550}
-              className="rounded-2xl shadow-xl"
+              className="image-shadow rounded-2xl shadow-xl shadow-secondary"
             />
           </div>
 
@@ -66,11 +66,14 @@ export default function Home() {
         {/* Section Title */}
         <CreativeBreakLine title="كيف تحجز ملعب" />
         {/* Cards Container */}
-        <div className="flex flex-col lg:flex-row items-center justify-center xl:space-x-8 lg:space-x-4 space-y-4 lg:space-y-0 w-5/6 md:w-full xl:w-3/4">
-          {/* Card 1: Vodafone Cash */}
+        <div
+          dir="rtl"
+          className="flex flex-col md:grid md:grid-cols-3 md:gap-2 lg:gap-4 xl:gap-8 items-center justify-center space-y-4 md:space-y-0 w-5/6 md:w-full xl:w-3/4 "
+        >
+          {/* Card 1: Select Field */}
           <CreativeCard
-            title="أكد حجزك عن طريق فودافون كاش"
-            icon={<CreditCardIcon className="size-12 text-primary" />}
+            title="أختر ملعب من الملاعب"
+            icon={<ShoppingBagIcon className="size-12 text-primary" />}
           />
 
           {/* Card 2: Match Time */}
@@ -79,10 +82,10 @@ export default function Home() {
             icon={<ClockIcon className="size-12 text-primary" />}
           />
 
-          {/* Card 3: Select Field */}
+          {/* Card 3: Vodafone Cash */}
           <CreativeCard
-            title="أختر ملعب من الملاعب"
-            icon={<ShoppingBagIcon className="size-12 text-primary" />}
+            title="أكد حجزك عن طريق فودافون كاش"
+            icon={<CreditCardIcon className="size-12 text-primary" />}
           />
         </div>
       </div>

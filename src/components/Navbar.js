@@ -22,7 +22,7 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
         <div className="text-lg font-bold">
           <Link href="/">
-            <Image src={logo} alt="logo" className="h-12 w-36 " />
+            <Image src={logo} alt="logo" className="h-12 w-40 " />
           </Link>
         </div>
         <div className="hidden md:flex space-x-8 ">
@@ -83,27 +83,27 @@ export default function Navbar() {
           <div className="flex flex-col space-y-4 px-4 pb-4  justify-center items-center text-center">
             <Link
               href="/"
-              className="hover:text-secondary flex justify-center space-x-2 items-center"
+              className="hover:bg-[#4fc4aba8] rounded-2xl hover:text-white p-3 w-full flex justify-center space-x-2 items-center"
             >
               الرئيسية
               <HomeIcon className="size-5" />
             </Link>
             <Link
               href="/pages/playgrounds"
-              className="hover:text-secondary flex justify-center space-x-2 items-center"
+              className="hover:bg-[#4fc4aba8] rounded-2xl hover:text-white p-3 w-full flex justify-center space-x-2 items-center"
             >
               الملاعب
               <IoMdFootball className="size-5" />
             </Link>
             <Link
               href="/pages/contact"
-              className="hover:text-secondary flex justify-center space-x-2 items-center"
+              className="hover:bg-[#4fc4aba8] rounded-2xl hover:text-white p-3 w-full flex justify-center space-x-2 items-center"
             >
               تواصل معنا <IoIosContacts className="size-5" />
             </Link>
             <Link
               href="/pages/signin"
-              className="hover:text-secondary flex justify-center space-x-2 items-center"
+              className="hover:bg-[#4fc4aba8] rounded-2xl hover:text-white p-3 w-full flex justify-center space-x-2 items-center"
             >
               تسجيل الدخول
               <GoSignIn className="size-5" />

@@ -6,6 +6,24 @@
   --background: #dfdfdf;
 }
 
+.calcheight {
+  min-height: calc(100vh - 212px);
+}
+@media only screen and (max-width: 1100px) {
+  .calcheight {
+    min-height: calc(100vh - 173px) !important;
+  }
+}
+
+.image-shadow {
+  /* https://smoothshadows.com/#djEsMiw1LDAuMjEsMjc1LC0zLDAsIzRmYzRhYiwjZmZmZmZmLCNmZmZmZmYsMg%3D%3D */
+  box-shadow: 0px -0px 11px rgba(79, 196, 171, 0.21),
+    0px -0px 44px rgba(79, 196, 171, 0.17),
+    0px -1px 99px rgba(79, 196, 171, 0.13),
+    0px -2px 176px rgba(79, 196, 171, 0.08),
+    0px -3px 275px rgba(79, 196, 171, 0.04);
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -28,7 +46,7 @@ body {
   width: 15px;
 }
 ::-webkit-scrollbar-track {
-  background: #4fc4ab;
+  background: #4fc4aba8;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -82,8 +100,6 @@ body {
   animation: rotBGimg 6s linear infinite;
 }
 /*Creative Button */
-
-/* Custom CSS to handle animations and polygon shapes */
 .polygon-clip {
   --color: #038f7f;
   clip-path: polygon(
@@ -196,4 +212,72 @@ button:hover #leftArrow {
   background-color: #038f7f;
   left: 103%;
   animation: leftArrow8 0.6s ease-in-out both infinite alternate;
+}
+
+/* Loader */
+
+main-loader {
+  height: 100vh;
+  background-color: rgba(253, 253, 253, 0.925);
+}
+
+.main-fader {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background-color: rgba(248, 248, 248, 0.671);
+  .loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    svg {
+      height: 300px;
+      display: block;
+      margin: 0 auto;
+      path {
+        animation-duration: 1s;
+        animation-name: pulse;
+        animation-iteration-count: infinite;
+        color: #26a380;
+
+        &.path-7 {
+          animation-delay: -1s;
+        }
+        &.path-6 {
+          animation-delay: -0.875s;
+        }
+        &.path-5 {
+          animation-delay: -0.75s;
+        }
+        &.path-4 {
+          animation-delay: -0.625s;
+        }
+        &.path-3 {
+          animation-delay: -0.5s;
+        }
+        &.path-2 {
+          animation-delay: -0.375s;
+        }
+        &.path-1 {
+          animation-delay: -0.25s;
+        }
+        &.path-0 {
+          animation-delay: -0.125s;
+        }
+      }
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.1;
+  }
+  30% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.1;
+  }
 }

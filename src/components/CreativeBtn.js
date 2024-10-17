@@ -2,10 +2,16 @@
 import Link from "next/link";
 import React from "react";
 
-const CreativeBtn = ({ lable, pass }) => {
+const CreativeBtn = ({ lable, pass, small = false }) => {
   return (
     <Link href={pass}>
-      <button className="relative  w-[200px] h-[65px]  lg:w-[220px] lg:h-[60px]  md:w-[250px] md:h-[80px] transition text-lg duration-100 bg-transparent border-none outline-none text-[13px] font-bold text-primary">
+      <button
+        className={`relative ${
+          small
+            ? "w-[180px] h-[50px] text-md"
+            : "w-[200px] h-[65px]  lg:w-[220px] lg:h-[60px]  md:w-[250px] md:h-[80px]  text-lg"
+        } transition duration-100 bg-transparent border-none outline-none text-[13px] font-bold text-primary`}
+      >
         {lable}
         <div
           id="clip"

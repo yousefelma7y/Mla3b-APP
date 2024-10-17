@@ -3,7 +3,7 @@ import NoData from "./NoData";
 
 export default function PlaygroundsCard({ data, demoImage }) {
   return data.length > 0 ? (
-    <div className="  grid lg:grid-cols-3 grid-cols-1 gap-8 justify-between items-center  lg:w-5/6 sm:w-3/4 w-full">
+    <div className="grid lg:grid-cols-3 grid-cols-1 space-y-4 lg:space-y-0 lg:gap-4 xl:gap-8 justify-between items-center  lg:w-5/6 sm:w-3/4 w-full">
       {data.map((playground) => (
         <div
           style={{
@@ -16,7 +16,7 @@ export default function PlaygroundsCard({ data, demoImage }) {
             overflow: "hidden",
             backgroundColor: "#ccc",
           }}
-          className="relative card border-4 shadow-xl md:h-[300px] h-[250px] border-secondary rounded-2xl p-4 w-full group transition-transform duration-300 transform hover:scale-105"
+          className="relative card border-4 image-shadow md:h-[300px] h-[250px] border-secondary rounded-2xl p-4 w-full group transition-transform duration-300 transform hover:scale-105"
           key={playground.id}
         >
           {/* Overlay Element */}
